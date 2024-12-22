@@ -34,3 +34,15 @@ export interface UserProps {
   website: string;
   company: Company;
 }
+
+export interface PostData {
+  userId: number;
+  id?: number; // Optional because the ID might not be set for new posts
+  title: string;
+  body: string;
+}
+
+export interface PostModalProps {
+  onClose: () => void; // Function to close the modal
+  onSubmit: (post: PostData) => void; // Function to handle form submission
+}
